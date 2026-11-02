@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+ 
+    <!-- Пока GSAP не загрузился, страница скрыта (чтобы не было вспышки). Если CDN недоступен — через 4с покажем всё как есть -->
+    <script>
+        document.documentElement.classList.add('js');
+        window.__jsFallback = setTimeout(function () {
+            document.documentElement.classList.remove('js');
+        }, 4000);
+    </script>
+ 
+    <link rel="stylesheet" href="style.css">
+ 
+    <title>aperture</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+        <div class="header__content">
+            <a href="" class="header__logo"><img src="./assets/icons/logo.svg" alt="logo"></a>
+ 
+            <nav class="header__nav" id="site-nav">
+                <ul class="header__ul">
+ 
+                    <li>
+                        <a href="#" class="business__areas-link">Business areas</a>
+                    </li>
+ 
+                    <li>
+                        <a href="#" class="header__links">Featured images</a>
+                    </li>
+ 
+                    <li>
+                        <a href="#" class="header__links">Gear cage</a>
+                    </li>
+ 
+                    <li>
+                        <a href="#" class="header__links">Contact</a>
+                    </li>
+ 
+                    <li>
+                        <div class="header__button">
+                            <a href="#" class="header__btn">Get template</a>
+                        </div>
+                    </li>
+ 
+                </ul>
+            </nav>
+ 
+            <button class="header__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+                <span></span>
+                <span></span>
+            </button>
+ 
+            <div class="header__overlay"></div>
+        </div>
+    </div>
+    </header>
+ 
+    <main class="main">
+        <section class="aperture__studios">
+            <div class="container">
+                <div class="aperture__info">
+                    <p class="mini__title">Photographer & Filmmaker</p>
+ 
+                    <h1 class="aperture__title">Aperture Studios</h1>
+ 
+                    <p class="aperture__desc">Capturing authentic moments and telling powerful stories through photography and film. <br>From intimate portraits to cinematic productions we turn your vision into timeless visuals.</p>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <section class="tech__info">
+            <div class="tech__info-content">
+ 
+                <div class="tech__info-item">
+                    <img src="./assets/icons/timer.svg" alt="" class="timer__img">
+                    <p class="tech__info-text">1/2000s</p>
+                </div>
+ 
+                <div class="tech__info-item">
+                    <img src="./assets/icons/lens.svg" alt="" class="lens__img">
+                    <p class="tech__info-text">f/11</p>
+                </div>
+ 
+                <div class="tech__info-item">
+                    <img src="./assets/icons/iso.svg" alt="" class="iso__img">
+                    <p class="tech__info-text">100</p>
+                </div>
+ 
+                <div class="tech__info-item">
+                    <img src="./assets/icons/Location-Icon-Light.svg" alt="" class="location">
+                    <p class="tech__info-text">Iceland</p>
+                </div>
+ 
+            </div>
+        </section>
+ 
+        <section class="what__we__do">
+            <div class="container">
+ 
+                <div class="what__we__do-text">
+                <h2 class="what__we__do-title">
+                    What we do.
+                </h2>
+ 
+                <p class="what__we__do-desc">
+                    The areas that we're specialized in.
+                </p>
+</div>
+ 
+            <div class="what__we__do-card-content">
+ 
+                <div class="card-item-one">
+ 
+                    <p class="card-item-text">
+                        Product Photography
+                    </p>
+ 
+                    <p class="card-item-desc">
+                        Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam.
+                    </p>
+ 
+                    <div class="read__more-button">
+ 
+                       <a class="read__more-btn" href="#"><img src="./assets/icons/black-xyinya.svg" alt="">Read more</a>
+                    </div>
+ 
+                </div>
+ 
+                <div class="card-item-two">
+ 
+                    <p class="card-item-text">
+                        Architecture Photography
+                    </p>
+ 
+                    <p class="card-item-desc">
+                        Aenean porta neque eget consequat fringilla. Vestibulum ultrices, orci nec egestas pharetra, ligula est semper enim, nec auctor sapien leo nec purus. Fusce tincidunt aliquet sapien, sit amet rhoncus leo imperdiet nec.
+                    </p>
+ 
+                    <div class="read__more-button">
+ 
+                       <a class="read__more-btn" href="#"><img src="./assets/icons/black-xyinya.svg" alt="">Read more</a>
+                    </div>
+ 
+                </div>
+ 
+                <div class="card-item-third">
+ 
+                    <p class="card-item-text">
+                        Drone Photography
+                    </p>
+ 
+                    <p class="card-item-desc">
+                       Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt. Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam.
+                    </p>
+ 
+                    <div class="read__more-button">
+ 
+                       <a class="read__more-btn" href="#"><img src="./assets/icons/black-xyinya.svg" alt="">Read more</a>
+                    </div>
+ 
+                </div>
+ 
+                <div class="card-item-four">
+ 
+                    <p class="card-item-text">
+                        Wildlife Photography
+                    </p>
+ 
+                    <p class="card-item-desc">
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus. Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula. Vestibulum sit amet urna turpis.
+                    </p>
+ 
+                    <div class="read__more-button">
+ 
+                       <a class="read__more-btn" href="#"><img src="./assets/icons/black-xyinya.svg" alt="">Read more</a>
+                    </div>
+ 
+                </div>
+ 
+            </div>
+ 
+            </div>
+        </section>
+ 
+        <section class="japan">
+    <div class="japan-text">
+        <h3 class="japan-title">Sunset at Mount Fuji</h3>
+        <p class="japan-desc">
+            Duis tristique sed lorem a vestibulum. Cras <br> commodo consequat orci, in convallis <br> risus egestas non.
+        </p>
+    </div>
+ 
+    <div class="tech__info japan-tech">
+        <div class="tech__info-content-japan">
+ 
+            <div class="tech__info-item-japan">
+                <img src="./assets/icons/timer.svg" alt="" class="timer__img">
+                <p class="tech__info-text">1/16</p>
+            </div>
+ 
+            <div class="tech__info-item-japan">
+                <img src="./assets/icons/lens.svg" alt="" class="lens__img">
+                <p class="tech__info-text">f/11</p>
+            </div>
+ 
+            <div class="tech__info-item-japan">
+                <img src="./assets/icons/iso.svg" alt="" class="iso__img">
+                <p class="tech__info-text">400</p>
+            </div>
+ 
+            <div class="tech__info-item-japan">
+                <img src="./assets/icons/Location-Icon-Light.svg" alt="" class="location">
+                <p class="tech__info-text">Japan</p>
+            </div>
+ 
+        </div>
+    </div>
+</section>
+ 
+        <section class="gear__cage-section">
+    <!-- <div class="container none"> -->
+        <div class="gear__cage-content">
+            <div class="gear__cage-left-side">
+                <div class="gear__cage-text">
+ 
+                    <div class="gear-upper-text">
+                        <p class="mini-gear-title">The Gear cage</p>
+                        <p class="gear-middle-title">The tools that we use.</p>
+                    </div>
+ 
+                    <p class="gear-description">
+                        The say that "no place is boring if you've had a good night's sleep and <br> have a pocket full of unexposed film". While we don't shoot (a lot) of film <br> these days — these are the tools that we actually use everyday to <br> capture the amazing things around us.
+                    </p>
+ 
+                </div>
+ 
+                <div class="gear-button">
+                    <a href="#" class="gear__btn">
+                        <img src="./assets/icons/black-xyinya.svg" alt="" class="gear__btn-icon">
+                        Check it out
+                    </a>
+                </div>
+            </div>
+        </div>
+ 
+ 
+    <div class="gear__cage-right-side">
+        <div class="gear__background">
+            <img src="./assets/images/IMAGE.png" alt="" class="gear-bg">
+        </div>
+ 
+        <div class="gear-tech">
+            <div class="tech__info-content-japan">
+                <div class="tech__info-item-japan">
+                    <img src="./assets/icons/timer.svg" alt="">
+                    <p class="tech__info-text">0.8"</p>
+                </div>
+                <div class="tech__info-item-japan">
+                    <img src="./assets/icons/lens.svg" alt="">
+                    <p class="tech__info-text">f/5.0</p>
+                </div>
+                <div class="tech__info-item-japan">
+                    <img src="./assets/icons/iso.svg" alt="">
+                    <p class="tech__info-text">100</p>
+                </div>
+                <div class="tech__info-item-japan">
+                    <img src="./assets/icons/Location-Icon-Light.svg" alt="">
+                    <p class="tech__info-text">Sweden</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+    <section class="leaf">
+    <div class="japan-text">
+        <h3 class="japan-title">Monstera Leafs</h3>
+        <p class="japan-desc">
+           Vestibulum sit amet urna turpis. Mauris <br> euismod elit et nisi ultrices, ut faucibus <br> orci tincidunt.
+        </p>
+    </div>
+ 
+    <div class="tech__info japan-tech">
+        <div class="tech__info-content-japan">
+ 
+            <div class="tech__info-item-japan">
+                <img src="./assets/icons/timer.svg" alt="" class="timer__img">
+                <p class="tech__info-text">1/400s</p>
+            </div>
+ 
+            <div class="tech__info-item-japan">
+                <img src="./assets/icons/lens.svg" alt="" class="lens__img">
+                <p class="tech__info-text">f/3,5</p>
+            </div>
+ 
+            <div class="tech__info-item-japan">
+                <img src="./assets/icons/iso.svg" alt="" class="iso__img">
+                <p class="tech__info-text">100</p>
+            </div>
+ 
+            <div class="tech__info-item-japan">
+                <img src="./assets/icons/Location-Icon-Light.svg" alt="" class="location">
+                <p class="tech__info-text">Costa Rica</p>
+            </div>
+ 
+        </div>
+    </div>
+</section>
+ 
+    <section class="past__clients">
+        <div class="container">
+            <div class="clients-text">
+                <p class="clients-title">
+                    Past clients
+                </p>
+                <p class="clients-desc">
+                    Trusted by your favourite companies
+                </p>
+            </div>
+ 
+            <div class="clients__logo">
+                <div class="clients-content">
+                    <img src="./assets/icons/hill playes.svg" alt="">
+                    <img src="./assets/icons/rick.svg" alt="">
+                    <img src="./assets/icons/cai.svg" alt="">
+                    <img src="./assets/icons/chill.svg" alt="">
+                    <img src="./assets/icons/stockholm.svg" alt="">
+                </div>
+            </div>
+ 
+        </div>
+    </section>
+ 
+    <section class="star">
+    <div class="japan-text">
+        <h3 class="japan-title">Star fall in the Himalayas</h3>
+        <p class="japan-desc">
+            Nulla rhoncus feugiat eros quis <br> consectetur. Morbi neque ex, <br> condimentum dapibus congue et,<br> vulputate ut ligula.
+        </p>
+    </div>
+ 
+    <div class="tech__info japan-tech">
+        <div class="tech__info-content-japan">
+ 
+            <div class="tech__info-item-japan">
+                <img src="./assets/icons/timer.svg" alt="" class="timer__img">
+                <p class="tech__info-text">6''</p>
+            </div>
+ 
+            <div class="tech__info-item-japan">
+                <img src="./assets/icons/lens.svg" alt="" class="lens__img">
+                <p class="tech__info-text">f/11</p>
+            </div>
+ 
+            <div class="tech__info-item-japan">
+                <img src="./assets/icons/iso.svg" alt="" class="iso__img">
+                <p class="tech__info-text">800</p>
+            </div>
+ 
+            <div class="tech__info-item-japan">
+                <img src="./assets/icons/Location-Icon-Light.svg" alt="" class="location">
+                <p class="tech__info-text">Nepal</p>
+            </div>
+ 
+        </div>
+    </div>
+</section>
+ 
+    <section class="help__photography">
+        <div class="help-photo-text">
+            <p class="help-photo-title">
+                Need help with photography <br> or videography?
+            </p>
+            <p class="help-photo-desc">
+                We're here for you!
+            </p>
+        </div>
+ 
+         <div class="check-it-button">
+                    <a href="#" class="check__btn">
+                        <img src="./assets/icons/black-xyinya.svg" alt="" class="check__btn-icon">
+                        Get in touch
+                    </a>
+                </div>
+ 
+ 
+    </section>
+ 
+    </main>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
