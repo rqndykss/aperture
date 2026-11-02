@@ -10,16 +10,12 @@
     const hasGsap = Boolean(window.gsap && window.ScrollTrigger);
     let lenis = null;
 
-    /* -------------------------------------------------------------
-       Ссылки-заглушки href="#" не должны прыгать наверх страницы
-    ------------------------------------------------------------- */
+   
     $$('a[href="#"]').forEach((link) => {
         link.addEventListener('click', (e) => e.preventDefault());
     });
 
-    /* -------------------------------------------------------------
-       Мобильное меню (работает и без GSAP)
-    ------------------------------------------------------------- */
+   
     const burger = $('.header__burger');
     const nav = $('.header__nav');
     const overlay = $('.header__overlay');
@@ -65,7 +61,7 @@
         });
     }
 
-    /* Без GSAP просто показываем страницу и выходим */
+   
     if (!hasGsap) {
         root.classList.remove('js');
         return;
@@ -74,9 +70,7 @@
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.config({ ignoreMobileResize: true });
 
-    /* -------------------------------------------------------------
-       Плавный скролл (Lenis), синхронизирован с ScrollTrigger
-    ------------------------------------------------------------- */
+   
     const motionOk = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
 
     if (motionOk && window.Lenis) {
@@ -90,9 +84,6 @@
         gsap.ticker.lagSmoothing(0);
     }
 
-    /* -------------------------------------------------------------
-       Разбиваем заголовки на слова (маска для «выезда» снизу)
-    ------------------------------------------------------------- */
     const splitWords = (el) => {
         const walk = (node) => {
             Array.from(node.childNodes).forEach((child) => {
@@ -123,9 +114,6 @@
 
     $$('.aperture__title, .what__we__do-title, .clients-title, .help-photo-title').forEach(splitWords);
 
-    /* -------------------------------------------------------------
-       Анимации (адаптивные, с учётом prefers-reduced-motion и hover)
-    ------------------------------------------------------------- */
     const mm = gsap.matchMedia();
 
     mm.add(
@@ -139,7 +127,7 @@
             const { motion, wide, stacked, hover } = context.conditions;
             if (!motion) return;
 
-            /* ---------- Первый экран ---------- */
+            
             const hero = gsap.timeline({ defaults: { ease: 'expo.out' } });
 
             hero
@@ -166,7 +154,7 @@
                 .from('.aperture__title .word__inner', { yPercent: 120, duration: 1.5, stagger: 0.12 }, 0.65)
                 .from('.aperture__desc', { y: 26, autoAlpha: 0, duration: 1.3 }, 1.0);
 
-            /* ---------- Заголовки секций ---------- */
+           
             $$('.what__we__do-title, .clients-title, .help-photo-title').forEach((title) => {
                 gsap.from($$('.word__inner', title), {
                     yPercent: 120,
@@ -188,7 +176,7 @@
                 });
             });
 
-            /* ---------- Блоки с EXIF-данными (выдержка, диафрагма, ISO, место) ---------- */
+            
             $$('.tech__info-content, .tech__info-content-japan').forEach((group) => {
                 gsap.from($$('.tech__info-item, .tech__info-item-japan', group), {
                     y: 16,
@@ -200,7 +188,7 @@
                 });
             });
 
-            /* ---------- Карточки «What we do» ---------- */
+            
             const cards = $$('.what__we__do-card-content > div');
 
             cards.forEach((card) => {
@@ -232,7 +220,7 @@
                 }
             });
 
-            /* ---------- Полноэкранные фото: Japan / Leaf / Star ---------- */
+            
             const frameFrom = stacked ? 'inset(3% 4% 3% 4% round 20px)' : 'inset(8% 5% 8% 5% round 28px)';
 
             $$('.japan, .leaf, .star').forEach((section) => {
@@ -286,7 +274,7 @@
                 )
                 .fromTo('.gear-bg', { scale: 1.3 }, { scale: 1, duration: 2.4 }, 0);
 
-            /* ---------- Клиенты ---------- */
+            
             gsap.from('.clients-content img', {
                 y: 36,
                 autoAlpha: 0,
@@ -297,7 +285,7 @@
                 scrollTrigger: { trigger: '.clients-content', start: 'top 90%' }
             });
 
-            /* ---------- Финальный призыв ---------- */
+            
             gsap.from('.check-it-button', {
                 y: 24,
                 autoAlpha: 0,
@@ -307,7 +295,7 @@
                 scrollTrigger: { trigger: '.check-it-button', start: 'top 96%' }
             });
 
-            /* ---------- Кнопки: лёгкий «магнит» + поворот иконки диафрагмы ---------- */
+            
             if (hover) {
                 $$('.header__button, .gear__btn, .check__btn, .read__more-btn').forEach((btn) => {
                     const xTo = gsap.quickTo(btn, 'x', { duration: 0.9, ease: 'elastic.out(1, 0.6)' });
@@ -334,10 +322,10 @@
         }
     );
 
-    /* Страница готова — убираем скрывающий класс */
+    
     root.classList.remove('js');
 
-    /* Пересчёт позиций после загрузки шрифтов и картинок */
+    
     const refresh = () => ScrollTrigger.refresh();
     window.addEventListener('load', refresh);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);

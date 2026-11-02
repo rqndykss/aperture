@@ -692,7 +692,7 @@ color: var(--gray);
     }
 }
 
-/* ---------- Планшеты: меню-бургер ---------- */
+
 @media (max-width: 1024px) {
     .header {
         padding: 18px 0;
@@ -882,7 +882,7 @@ color: var(--gray);
         margin-bottom: 28px;
     }
 
-    /* Gear cage */
+    
     .gear__cage-content {
         min-height: 0;
         padding: 72px 24px 56px;
